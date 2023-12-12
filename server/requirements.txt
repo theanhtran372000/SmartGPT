@@ -1,0 +1,7 @@
+Flask
+flask_cors
+PyYAML
+openai
+loguru
+sseclient-py
+pillow
