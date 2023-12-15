@@ -1,8 +1,11 @@
 app:
   host: '0.0.0.0'
-  port: 2000
+  port: 3000
   save_dir: 'save/tmps'
   multithread: True
 
 openai:
   keypath: 'save/keys/openai.txt'
+
+faiss:
+  storage: 'save/storage'

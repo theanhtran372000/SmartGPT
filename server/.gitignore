@@ -1,2 +1,4 @@
 venv
 save/keys
+save/tmps
+__pycache__

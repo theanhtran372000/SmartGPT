@@ -1,7 +1,13 @@
 Flask
 flask_cors
 PyYAML
-openai
 loguru
 sseclient-py
 pillow
+ipykernel
+jupyter
+langchain
+faiss-cpu
+openai
+unstructured
+tiktoken
