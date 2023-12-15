@@ -1,11 +1,14 @@
 import os
+import sys
+sys.path.insert(0, os.path.abspath('../'))
+
 from loguru import logger
 
-from loader import WebLoader
-from splitter import CharacterSplitter
-from store import build_faiss_store, save_faiss_store, load_faiss_store
-from model import get_emb, get_llm
-from chatbot import build_chain
+from core.loader import WebLoader
+from core.splitter import CharacterSplitter
+from core.store import build_faiss_store, save_faiss_store, load_faiss_store
+from core.model import get_emb, get_llm
+from core.chatbot import build_chain
 
 if __name__ == '__main__':
     

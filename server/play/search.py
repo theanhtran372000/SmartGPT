@@ -1,16 +1,14 @@
-import pprint
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../'))
+
 from loguru import logger
-from googlesearch import search
-
-
-def search_urls(term, num_results):
-    results = []
-    for url in search(term, num_results=num_results, lang='vi', sleep_interval=5):
-        results.append(url)
-    return results
-
+from core.crawler import search_for_term
 
 if __name__ == '__main__':
-    keyword = 'Quả bóng vàng 2024'
-    urls = search_urls(keyword, num_results=1)
-    logger.info('URLs: \n{}'.format(pprint.pformat(urls)))
+    term = 'Quả bóng vàng 2024'
+    logger.info('URLs: ')
+    for i, url in enumerate(search_for_term(
+        term, num_results=20
+    )):
+        logger.info('{}: {}'.format(i + 1, url))

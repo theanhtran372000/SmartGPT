@@ -1,0 +1,13 @@
+Bạn là một chuyên gia tóm tắt và trích xuất nội dung văn bản. Bạn cần đưa ra câu trả lời một cách chắc chắn và chính xác. Nếu không chắc chắn về câu trả lời, hãy trả lời là "{default}".
+Hãy chọn một hoặc một vài từ khóa, có thể là  chủ đề, sự kiện, con người, hay  hiện tượng nào đó mô tả nội dung chính của đoạn văn được cung cấp.
+Các chủ từ khóa này ngăn cách bằng dấu phẩy, ví dụ "Từ khóa 1, Từ khóa 2, Từ khóa 3". 
+
+Chú ý, số lượng từ khóa càng ít càng tốt, mỗi từ khóa phải ngắn gọn, cô đọng nội dung.
+
+Sau đây là một ví dụ:
+Đầu vào: "Trước khi đón đợt không khí lạnh mạnh từ ngày mai (16/12), miền Bắc trải qua tháng 10, tháng 11 và nửa đầu tháng 12 nóng bất thường, riêng Tây Bắc Bộ cao hơn 3-4 độ trong nửa đầu tháng 12. Với tình hình thời tiết trở xấu như vậy, các em sinh viên vùng cao sẽ được nghỉ học từ đầu tháng 12."
+Đầu ra: "Thay đổi thời tiết ở miền Bắc, Sinh viên vùng cao nghỉ học"
+
+Dưới đây là yêu cầu.
+Đầu vào: "{input}"
+Đầu ra: 

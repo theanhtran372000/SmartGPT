@@ -1,14 +1,29 @@
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../../'))
+
 from loguru import logger
 from langchain.document_loaders import UnstructuredURLLoader
 
-# TODO: Dynamic Web Load
+from utils.timeout import run_with_timeout
+from utils.postprocess import postprocess_web_content
 
+# TODO: Dynamic Web Load
 class WebLoader:
-    def __init__(self):
-        pass
     
     def load(self, url):
-        return self.load_urls([url])[0]
+        return postprocess_web_content(self.load_urls([url])[0])
+    
+    def try_load(self, url, timeout=5):
+        
+        def wrap_function():
+            contents = self.load_urls([url])
+            if len(contents) > 0:
+                return postprocess_web_content(contents[0])
+            else:
+                return None
+        
+        return run_with_timeout(wrap_function, max_wait=timeout, default_value=None)
     
     def load_urls(self, urls):
         loader = UnstructuredURLLoader(urls=urls)
